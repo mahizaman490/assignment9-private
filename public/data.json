@@ -3,42 +3,42 @@
       {
         "id": "1",
         "name": "Elegant Wedding Celebration",
-        "image": "wedding_image.jpg",
+        "image": "https://i.ibb.co/pvX10ns/wedding-reception-overview-15497069.webp",
         "price": "$10,000",
         "description": "A lavish and romantic wedding ceremony and reception in a stunning venue."
       },
       {
         "id": "2",
         "name": "Joyful Birthday Bash",
-        "image": "birthday_image.jpg",
+        "image": "https://i.ibb.co/dMk6vvM/one-year-birthday-decoration-white-blue-balloons-different-angle-288529274.webp",
         "price": "$500",
         "description": "A fun-filled birthday party with games, cake, and entertainment for all ages."
       },
       {
         "id": "3",
         "name": "Silver Anniversary Gala",
-        "image": "anniversary_image.jpg",
+        "image": "https://i.ibb.co/LYP7m7L/restaurant-5508100.webp",
         "price": "$3,000",
         "description": "A special event commemorating 25 years of love and togetherness."
       },
       {
         "id": "4",
         "name": "Engagement Extravaganza",
-        "image": "engagement_image.jpg",
+        "image": "https://i.ibb.co/WVmG10j/groom-putting-ring-bride-s-finger.jpg",
         "price": "$1,200",
         "description": "A chic engagement party to celebrate the newly engaged couple."
       },
       {
         "id": "5",
         "name": "Retirement Farewell Soiree",
-        "image": "retirement_image.jpg",
+        "image": "https://i.ibb.co/pb8pSWB/istockphoto-1188189640-612x612.jpg",
         "price": "$800",
         "description": "A heartfelt send-off party to honor a colleague's retirement."
       },
       {
         "id": "6",
         "name": "Sweet Baby Shower",
-        "image": "babyshower_image.jpg",
+        "image": "https://i.ibb.co/vx2sph0/51793570-baby-shower-card-with-cute-baby-girl-in-bath-happy-toddler-splashing-water-vector-cartoon-g.jpg",
         "price": "$600",
         "description": "A delightful baby shower to welcome the arrival of a new bundle of joy."
       }
