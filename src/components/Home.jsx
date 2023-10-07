@@ -1,4 +1,5 @@
 
+import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 
 import Gallery from "./Gallery";
@@ -7,10 +8,12 @@ import ServicesSection from "./ServicesSection";
 
 
 const Home = () => {
+const {events} = useLoaderData()
+console.log(events)
     return (
         <div>
           <Banner></Banner>
-          <ServicesSection></ServicesSection>
+          <ServicesSection events={events}></ServicesSection>
           <Gallery></Gallery>
           <HappyClients></HappyClients>
 

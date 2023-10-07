@@ -1,27 +1,24 @@
 
+import EventCard from "./EventCard";
 
-const ServicesSection = () => {
+const ServicesSection = ({events}) => {
+    console.log(events)
     return (
-        <div className="w-8/12 mx-auto justify-center items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-            <div className="card bg-base-100 shadow-xl">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-  <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
-           
+        <div className="w-10/12 mx-auto">
+            <h1 className="text-3xl text-red-500 font-semibold text-center md:text-6xl">OUR</h1> 
+            <p className="text-2xl text-yellow-400 font-semibold text-center md:text-5xl py-3">SERVICES</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-2">
+
+            {
+
+         events && events?.map(event => <EventCard key={event.id}> </EventCard> )
+
+
+            }
+
+
             </div>
-
-
-
-
-
-
-
+        </div>
     );
 };
 
