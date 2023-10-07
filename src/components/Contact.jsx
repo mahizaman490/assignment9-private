@@ -3,7 +3,7 @@ import { BsTelephonePlus,BsStopwatch } from 'react-icons/bs';
 import { GiNotebook } from 'react-icons/gi';
 const Contact = () => {
     return (
-        <div className="w-8/12 gap-2 mx-auto justify-center items-center grid grid-cols-1 md:grid-cols-2 ">
+        <div className="w-8/12 pt-10 gap-2 mx-auto justify-center items-center grid grid-cols-1 md:grid-cols-2 ">
 
 <div className="bg-red-500  text-white p-10 rounded-xl font-semibold ">
 <CiLocationOn className='text-3xl '></CiLocationOn>
