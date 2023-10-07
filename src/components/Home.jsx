@@ -1,5 +1,6 @@
+
 import Banner from "./Banner";
-import Footer from "./Footer";
+
 import Gallery from "./Gallery";
 import HappyClients from "./HappyClients";
 import ServicesSection from "./ServicesSection";
@@ -12,7 +13,7 @@ const Home = () => {
           <ServicesSection></ServicesSection>
           <Gallery></Gallery>
           <HappyClients></HappyClients>
-          <Footer></Footer>
+
         </div>
     );
 };
