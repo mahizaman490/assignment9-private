@@ -1,9 +1,18 @@
+import Banner from "./Banner";
+import Footer from "./Footer";
+import Gallery from "./Gallery";
+import HappyClients from "./HappyClients";
+import ServicesSection from "./ServicesSection";
 
 
 const Home = () => {
     return (
         <div>
-            <h2>this is home page</h2>
+          <Banner></Banner>
+          <ServicesSection></ServicesSection>
+          <Gallery></Gallery>
+          <HappyClients></HappyClients>
+          <Footer></Footer>
         </div>
     );
 };
