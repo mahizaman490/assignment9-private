@@ -1,20 +1,49 @@
-import { createContext, useState } from "react";
-
+/* eslint-disable react/prop-types */
+import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+
+
+
 export const AuthContext = createContext(null)
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
-const AuthProvider = ({children}) => {
-    const [user,setUser] = useState(null)
 
-    const createUser = (email,password) =>{
-        return createUserWithEmailAndPassword(auth,password,email);
+const AuthProvider = ({ children }) => {
+    // eslint-disable-next-line no-unused-vars
+    const [user, setUser] = useState(null)
+    const [loading,setLoading] = useState(true)
+    const createUser = (email, password) => {
+        setLoading(true)
+        return createUserWithEmailAndPassword(auth, email, password);
     }
-    const signInUser = (email,password) => {
-        return signInWithEmailAndPassword(auth,email,password)
+    const signInUser = (email, password) => {
+        setLoading(true)
+        return signInWithEmailAndPassword(auth, email, password)
     }
+    const logOut = () =>{
+        setLoading(true)
+        return signOut(auth)
+    }
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, currentUser => {
+            console.log('current value the current user', currentUser)
+            setUser(currentUser)
+            setLoading(false)
 
-    const authInfo = {user,createUser,signInUser}
+        });
+        return () =>{
+          unSubscribe();  
+        }
+    }, [])
+
+    const authInfo = { 
+        user,
+         createUser, 
+         signInUser ,
+         logOut,
+         loading
+        
+        }
 
 
     return (

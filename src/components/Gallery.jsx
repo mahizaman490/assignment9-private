@@ -4,9 +4,7 @@ const Gallery = () => {
     return (
             <>
             
-        <div className="md:pb-40"data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
+        <div className="md:pb-40" data-aos="zoom-out-up">
 
 
 
