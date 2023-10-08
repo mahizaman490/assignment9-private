@@ -1,8 +1,15 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import PropTypes from 'prop-types'; // ES6
+import auth from "../firebase/firebase.config";
 export const AuthContext = createContext(null)
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
 const AuthProvider = ({children}) => {
-    const authInfo = {name:'nodi sagor'}
+    const [user,setUser] = useState(null)
+    const createUser = (email,password) =>{
+        return createUserWithEmailAndPassword (auth,password,email)
+    }
+    const authInfo = {user,createUser}
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

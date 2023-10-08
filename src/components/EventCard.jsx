@@ -5,8 +5,8 @@ const EventCard = ({event}) => {
   const {id,name,image,price,description} = event || {}
     return (
         <div>
-            <div className="relative flex  flex-col rounded-xl  bg-white bg-clip-border text-gray-700 shadow-md">
-  <div className="relative mx-4 mt-4 h-96 overflow-hidden rounded-xl lg:rounded-full bg-white bg-clip-border text-gray-700">
+            <div className="relative flex  flex-col rounded-full  bg-amber-300 bg-clip-border text-gray-700 shadow-md">
+  <div className="relative mx-4 mt-4 h-96 overflow-hidden  rounded-full bg-white bg-clip-border text-gray-700">
     <img
       src={image}
       className="h-full w-full object-cover"
@@ -28,7 +28,7 @@ const EventCard = ({event}) => {
   <div className="p-6 pt-0">
   <Link to={`/events/${id}`}>
   <button
-      className="block w-full text-white select-none rounded-lg bg-red-600 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+      className="block m-0 mx-auto text-white select-none rounded-full bg-red-600 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       type="button"
     >
       Add to Cart

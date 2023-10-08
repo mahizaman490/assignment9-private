@@ -5,7 +5,7 @@ const HappyClients = () => {
         <div>
             <div className="w-8/12 pt-10 gap-2 mx-auto justify-center items-center grid grid-cols-1 md:grid-cols-2 ">
 
-                <div className="bg-orange-200  p-10 rounded-xl font-semibold rounded-full">
+                <div className="bg-orange-200  p-10 rounded-full font-semibold rounded-full">
 
 
 
