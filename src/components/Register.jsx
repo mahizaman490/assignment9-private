@@ -4,15 +4,24 @@ import { AuthContext } from "../providers/AuthProvider";
 
 
 const Register = () => {
-  const authInfo = useContext(AuthContext)
-  console.log(authInfo)
+  const {createUser} = useContext(AuthContext)
+ 
   const handleRegister = e =>{
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(name,email,password)
-    
+    createUser(email,password)
+    .then(result =>{
+console.log(result.user)
+
+    })
+    .catch(error =>{
+      console.error(error)
+    })
+
+
   }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -27,7 +36,7 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Name</span>
                 </label>
-                <input type="name" name="name" placeholder="name" className="input input-bordered" required />
+                <input type="text" name="name" placeholder="name" className="input input-bordered" required />
               </div>
               <div className="form-control">
                 <label className="label">

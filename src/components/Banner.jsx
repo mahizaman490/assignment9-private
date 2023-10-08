@@ -10,7 +10,8 @@ const Banner = () => {
         
        </div>
        <div>
-        <h1 className=" text-3xl md:text-6xl lg:text-7xl font-semibold text-yellow-500 absolute top-[35%]  left-[25%]  md:top-[40%]  lg:left-[32%]"> <span className="text-rose-600">We Create  You </span>
+        <h1 data-aos="fade-up"
+     data-aos-duration="3000" className=" text-3xl md:text-6xl lg:text-7xl font-semibold text-yellow-500 absolute top-[35%]  left-[25%]  md:top-[40%]  lg:left-[32%]"> <span className="text-rose-600">We Create  You </span>
         <br />celebrate !!</h1>
        </div>
        </div >

@@ -4,13 +4,15 @@ const Gallery = () => {
     return (
             <>
             
-        <div className="md:pb-40">
+        <div className="md:pb-40"data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
 
 
 
         <h1 className="text-3xl text-red-500 font-semibold text-center md:text-6xl">Gallery</h1> 
             <p className="text-2xl text-yellow-400 font-semibold text-center md:text-5xl py-3">OUR RECENT PROJECTS</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-2 ">
             <div className="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
   <div className="relative mx-4 mt-4 h-96 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
     <img
