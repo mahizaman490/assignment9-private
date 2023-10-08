@@ -3,7 +3,7 @@
 const HappyClients = () => {
     return (
         <div>
-            <div className="w-8/12 pt-10 gap-2 mx-auto justify-center items-center grid grid-cols-1 md:grid-cols-2 " data-aos="fade-left"
+            <div className="w-8/12 pt-10 gap-2 mx-auto justify-center items-center grid grid-cols-1 md:grid-cols-2 " data-aos="fade-up"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">
 

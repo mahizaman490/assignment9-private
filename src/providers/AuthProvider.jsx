@@ -1,17 +1,17 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 
 
 
 export const AuthContext = createContext(null)
-
+const googleProvider = new GoogleAuthProvider()
 
 const AuthProvider = ({ children }) => {
     // eslint-disable-next-line no-unused-vars
     const [user, setUser] = useState(null)
-    const [loading,setLoading] = useState(true)
+    const [loading, setLoading] = useState(true)
     const createUser = (email, password) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password);
@@ -20,7 +20,12 @@ const AuthProvider = ({ children }) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
-    const logOut = () =>{
+
+    const signInWithGoogle = () => {
+        setLoading(true);
+        return signInWithPopup(auth, googleProvider)
+    }
+    const logOut = () => {
         setLoading(true)
         return signOut(auth)
     }
@@ -31,19 +36,21 @@ const AuthProvider = ({ children }) => {
             setLoading(false)
 
         });
-        return () =>{
-          unSubscribe();  
+        return () => {
+            unSubscribe();
         }
     }, [])
 
-    const authInfo = { 
+    const authInfo = {
         user,
-         createUser, 
-         signInUser ,
-         logOut,
-         loading
-        
-        }
+        loading,
+        createUser,
+        signInUser,
+
+
+        signInWithGoogle,
+        logOut
+    }
 
 
     return (
