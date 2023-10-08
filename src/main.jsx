@@ -13,8 +13,9 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Contact from './components/Contact';
 import About from './components/About';
-import Services from './components/Services';
+
 import Errorpage from './errorPage/Errorpage';
+import Event from './components/Event';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,9 +44,11 @@ const router = createBrowserRouter([
         path:'/about',
         element:<About></About>
       },
+    
       {
-        path:'/services',
-        element:<Services></Services>
+        path:'/events/:id',
+        element:<Event></Event>,
+        loader:()=>fetch('/data.json')
       }
     ]
   },

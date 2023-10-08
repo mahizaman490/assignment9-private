@@ -6,10 +6,10 @@ const Navbar = () => {
     <li><NavLink to='/login'>Login</NavLink></li>
     <li><NavLink to='/register'>Register</NavLink></li>
     {/* when clicking only lgin user can go into this page */}
-    <li><NavLink to='/services'>Services</NavLink></li>
-    {/* only login users can see it */}
-    <li><NavLink to='/about'>About</NavLink></li>
+  <li><NavLink to='/about'>About</NavLink></li>
     <li><NavLink to='/contact'>Contact</NavLink></li>
+    {/* only login users can see it */}
+    
     
     
     
