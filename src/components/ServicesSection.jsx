@@ -1,6 +1,6 @@
 
 import EventCard from "./EventCard";
-
+import PropTypes from 'prop-types'; // ES6
 const ServicesSection = ({events}) => {
     console.log(events)
     return (
@@ -23,3 +23,6 @@ const ServicesSection = ({events}) => {
 };
 
 export default ServicesSection;
+ServicesSection.propTypes = {
+    events: PropTypes.node
+}

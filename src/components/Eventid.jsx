@@ -1,5 +1,5 @@
 
-
+import PropTypes from 'prop-types'; // ES6
 const Eventid = ({event}) => {
     const {name,image,price,description} = event || {}
     return (
@@ -53,3 +53,7 @@ const Eventid = ({event}) => {
 };
 
 export default Eventid;
+
+Eventid.propTypes = {
+    event: PropTypes.node
+}
