@@ -23,7 +23,7 @@ if(password.length < 6){
   }else if(!/[A-Z]/.test(password)){
     SetRegisterError('Your password should have at least one upper case characters');
     return;
-  }else if(!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\]/.test(password)){
+  }else if(!/[!@#$%^&*()_+{}\\[\]:;<>,.?~\\]/.test(password)){
     SetRegisterError('Your password should have a special characters');
     return;
   }
