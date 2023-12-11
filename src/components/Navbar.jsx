@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
-
+import { Button, Icon } from "@mui/material";
+import VpnKeyIcon from '@mui/icons-material/VpnKey';
 const Navbar = () => {
 
   const { user, logOut } = useContext(AuthContext);
@@ -47,6 +48,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end ">
+      <Icon component={VpnKeyIcon} className="icon text-2xl mr-2 " />
         {
           user ? <>
             <div className="avatar online ">
@@ -58,10 +60,16 @@ const Navbar = () => {
             <span> <small>{user.displayName
             }</small></span>
 
-            <a onClick={handleLogOut} className="btn btn-sm">Logout</a>
+
+<Button onClick={handleLogOut}  variant="contained" size="small">
+              Logout
+            </Button>
+            
           </>
             : <Link to='/login'>
-              <button className="btn btn-sm">Login</button>
+             <Button variant="contained" size="small">
+              Login
+            </Button>
             </Link>
         }
 

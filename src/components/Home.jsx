@@ -5,6 +5,7 @@ import Banner from "./Banner";
 import Gallery from "./Gallery";
 import HappyClients from "./HappyClients";
 import ServicesSection from "./ServicesSection";
+import SliderComponent from "./SliderComponent";
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ console.log(events)
           <ServicesSection events={events}></ServicesSection>
           <Gallery></Gallery>
           <HappyClients></HappyClients>
+          <SliderComponent></SliderComponent>
 
         </div>
     );
